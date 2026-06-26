@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideEZ - User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">RideEZ</div>
+
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="book-ride.html">Book Ride</a>
+                <a href="user-dashboard.html" class="active">Dashboard</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-btn">🌙</button>
+                <button id="menuToggle" class="menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="user-dashboard-page">
+        <div class="user-dashboard-wrapper">
+
+            <div class="profile-panel">
+                <div class="profile-card">
+                    <div class="profile-top">
+                        <div class="avatar-box" id="userAvatar">U</div>
+                        <div>
+                            <h2 id="userNameHeading">User Profile</h2>
+                            <p class="profile-subtext">Manage your RideEZ account</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-row">
+                        <span class="label">Name</span>
+                        <span id="userName">-</span>
+                    </div>
+
+                    <div class="profile-row">
+                        <span class="label">Email</span>
+                        <span id="userEmail">-</span>
+                    </div>
+
+                    <div class="profile-row">
+                        <span class="label">Phone</span>
+                        <span id="userPhone">-</span>
+                    </div>
+
+                    <div class="profile-row">
+                        <span class="label">Role</span>
+                        <span id="userRole">User</span>
+                    </div>
+
+                    <div class="profile-actions">
+                        <button class="edit-btn" onclick="openEditProfileModal()">Edit Profile</button>
+                        <button class="logout-btn" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <h3>Total Rides</h3>
+                        <p id="totalRides">0</p>
+                    </div>
+
+                    <div class="stats-card">
+                        <h3>Total Spent</h3>
+                        <p id="totalSpent">₹0</p>
+                    </div>
+
+                    <div class="stats-card">
+                        <h3>Last Ride</h3>
+                        <p id="lastRide">No rides</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ride-history-panel">
+                <div class="history-header">
+                    <div>
+                        <h2>Ride History</h2>
+                        <p class="history-subtext">All your recent ride bookings will appear here.</p>
+                    </div>
+
+                    <div class="history-actions">
+                        <a href="book-ride.html" class="mini-book-btn">+ Book Ride</a>
+                        <button class="clear-history-btn" onclick="clearRideHistory()">Clear History</button>
+                    </div>
+                </div>
+
+                <div id="rideList" class="ride-list">
+                    <div class="empty-message">
+                        <h3>No rides booked yet</h3>
+                        <p>Your ride bookings will appear here once you make a booking.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="editProfileModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <button class="close-modal-btn" onclick="closeEditProfileModal()">✕</button>
+            </div>
+
+            <form id="editProfileForm">
+                <div class="form-group">
+                    <label for="editUserName">Full Name</label>
+                    <input type="text" id="editUserName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editUserEmail">Email</label>
+                    <input type="email" id="editUserEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editUserPhone">Phone</label>
+                    <input type="tel" id="editUserPhone" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Save Changes</button>
+            </form>
+
+            <div id="editProfileMsg"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

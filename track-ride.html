@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RideEZ - Track Ride</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">RideEZ</div>
+
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="user-dashboard.html">Dashboard</a>
+                <a href="track-ride.html" class="active">Track Ride</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="tracking-page">
+        <div class="tracking-wrapper">
+            <div class="tracking-top-card">
+                <h1>Live Ride Tracking</h1>
+                <p id="trackRideInfo">Tracking details will appear here...</p>
+            </div>
+
+            <div class="tracking-map-card">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

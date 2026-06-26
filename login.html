@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideEZ - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">RideEZ</div>
+
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="book-ride.html">Book Ride</a>
+                <a href="driver-register.html">Become Driver</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="active">Login</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-btn">🌙</button>
+                <button id="menuToggle" class="menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="auth-page">
+        <div class="auth-wrapper">
+
+            <div class="auth-left">
+                <span class="badge">Welcome Back</span>
+                <h1>Welcome back to RideEZ</h1>
+                <p>Login to book rides, manage your profile, check ride history and access your dashboard.</p>
+
+                <div class="auth-features">
+                    <div class="feature-card">
+                        <h3>Fast Booking</h3>
+                        <p>Book bike, auto or cab rides in just a few clicks.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Ride History</h3>
+                        <p>Track your previous bookings, fares and ride details.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Safe & Reliable</h3>
+                        <p>Professional drivers, smooth UI and secure booking flow.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-right">
+                <div class="form-box">
+                    <h2>Login</h2>
+
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="password-wrap">
+                                <input type="password" id="password" placeholder="Enter password" required>
+                                <span class="toggle-password" onclick="togglePassword('password', this)">👁️</span>
+                            </div>
+                        </div>
+
+                        <div class="remember-row">
+                            <label class="remember-label">
+                                <input type="checkbox" id="rememberMe"> Remember me
+                            </label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Login Now</button>
+                    </form>
+
+                    <p id="loginMsg"></p>
+
+                    <div class="auth-footer-text">
+                        Don’t have an account? <a href="signup.html">Create account</a>
+                    </div>
+
+                    <div class="demo-admin-box">
+                        <h4>Demo Admin Access</h4>
+                        <p>Email: admin@rideez.com</p>
+                        <p>Password: admin123</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

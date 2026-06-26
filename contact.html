@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideEZ - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">RideEZ</div>
+
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="book-ride.html">Book Ride</a>
+                <a href="driver-register.html">Driver Register</a>
+                <a href="driver-dashboard.html">Driver Dashboard</a>
+                <a href="admin.html">Admin</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="signup.html">Signup</a>
+                <a href="login.html">Login</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-btn">🌙</button>
+                <button id="menuToggle" class="menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-page">
+        <div class="contact-wrapper">
+
+            <div class="contact-left">
+                <span class="badge">Get In Touch</span>
+                <h1>Contact RideEZ</h1>
+                <p>
+                    Have questions, booking issues, partnership requests or support queries?
+                    Send us a message and we’ll get back to you.
+                </p>
+
+                <div class="contact-info-cards">
+                    <div class="contact-info-card">
+                        <h3>Call Us</h3>
+                        <p>+91 8805260108</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>Email Us</h3>
+                        <p>shindeshubham0413@gmail.com</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>Visit Us</h3>
+                        <p>Deulgaon Raja, Buldhana, Maharashtra, India</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>Support Time</h3>
+                        <p>Mon - Sun | 8:00 AM - 10:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <div class="form-box">
+                    <h2>Send Message</h2>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name</label>
+                            <input type="text" id="contactName" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" placeholder="Enter subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message</label>
+                            <textarea id="contactMessage" rows="6" placeholder="Write your message here..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+
+                    <div id="contactMsg"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideEZ - Book Ride</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">RideEZ</div>
+
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="book-ride.html" class="active">Book Ride</a>
+                <a href="driver-register.html">Driver Register</a>
+                <a href="user-dashboard.html">User Dashboard</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-btn">🌙</button>
+                <button id="menuToggle" class="menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="booking-page">
+        <div class="booking-wrapper">
+
+            <div class="booking-left">
+                <span class="badge">Quick Ride Booking</span>
+                <h1>Book Your Ride with RideEZ</h1>
+                <p>
+                    Fast, safe and affordable rides for your daily travel.
+                    Choose your vehicle, check fare instantly and confirm your booking.
+                </p>
+
+                <div class="booking-features">
+                    <div class="feature-card">
+                        <h3>Instant Fare</h3>
+                        <p>Check estimated fare before confirming your ride.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Multiple Vehicles</h3>
+                        <p>Book Bike, Auto or Cab based on your need and budget.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Ride History</h3>
+                        <p>Your bookings are saved and visible in dashboard.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-right">
+                <div class="form-box">
+                    <h2>Book a Ride</h2>
+
+                    <form id="rideForm">
+                        <div class="form-group">
+                            <label for="rideName">Your Name</label>
+                            <input type="text" id="rideName" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ridePhone">Phone Number</label>
+                            <input type="tel" id="ridePhone" placeholder="Enter phone number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pickup">Pickup Location</label>
+                            <input type="text" id="pickup" placeholder="Enter pickup location" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="drop">Drop Location</label>
+                            <input type="text" id="drop" placeholder="Enter drop location" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vehicle">Vehicle Type</label>
+                            <select id="vehicle" required>
+                                <option value="">Select Vehicle</option>
+                                <option value="Bike">Bike</option>
+                                <option value="Auto">Auto</option>
+                                <option value="Cab">Cab</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="distance">Distance (KM)</label>
+                            <input type="number" id="distance" placeholder="Enter distance in KM" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentMethod">Payment Method</label>
+                            <select id="paymentMethod" required>
+                                <option value="">Select Payment Method</option>
+                                <option value="Cash">Cash</option>
+                                <option value="UPI">UPI</option>
+                                <option value="Card">Card</option>
+                            </select>
+                        </div>
+
+                        <div id="fareBox" class="fare-box">
+                            <p>Fare details will appear here</p>
+                        </div>
+
+                        <button type="button" class="btn secondary-btn full-btn" onclick="calculateFare()">
+                            Check Fare
+                        </button>
+
+                        <button type="submit" class="submit-btn">
+                            Book Ride
+                        </button>
+                    </form>
+
+                    <div id="rideMsg"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
