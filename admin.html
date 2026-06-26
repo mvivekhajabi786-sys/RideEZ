@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideEZ - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">RideEZ</div>
+
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="book-ride.html">Book Ride</a>
+                <a href="driver-register.html">Driver Register</a>
+                <a href="driver-dashboard.html">Driver Dashboard</a>
+                <a href="admin.html" class="active">Admin</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="admin-page">
+        <div class="admin-top">
+            <h1>Admin Dashboard</h1>
+            <p>Manage users, drivers, rides and contact messages</p>
+        </div>
+
+        <div class="admin-stats">
+            <div class="admin-stat-card">
+                <h2 id="totalUsers">0</h2>
+                <p>Total Users</p>
+            </div>
+
+            <div class="admin-stat-card">
+                <h2 id="totalDrivers">0</h2>
+                <p>Total Drivers</p>
+            </div>
+
+            <div class="admin-stat-card">
+                <h2 id="totalRides">0</h2>
+                <p>Total Rides</p>
+            </div>
+
+            <div class="admin-stat-card">
+                <h2 id="totalContacts">0</h2>
+                <p>Contact Messages</p>
+            </div>
+        </div>
+
+        <div class="admin-search">
+            <input type="text" id="adminSearch" placeholder="Search users, drivers, rides or contacts">
+        </div>
+
+        <!-- USERS -->
+        <section class="admin-section">
+            <div class="section-head">
+                <h2>Users</h2>
+                <button class="clear-btn" onclick="clearUsers()">Clear All Users</button>
+            </div>
+            <div id="usersList" class="admin-grid"></div>
+        </section>
+
+        <!-- DRIVERS -->
+        <section class="admin-section">
+            <div class="section-head">
+                <h2>Drivers</h2>
+                <button class="clear-btn" onclick="clearDrivers()">Clear All Drivers</button>
+            </div>
+            <div id="driversList" class="admin-grid"></div>
+        </section>
+
+        <!-- RIDES -->
+        <section class="admin-section">
+            <div class="section-head">
+                <h2>Ride Bookings</h2>
+                <button class="clear-btn" onclick="clearRides()">Clear All Rides</button>
+            </div>
+            <div id="ridesList" class="admin-grid"></div>
+        </section>
+
+        <!-- CONTACTS -->
+        <section class="admin-section">
+            <div class="section-head">
+                <h2>Contact Messages</h2>
+                <button class="clear-btn" onclick="clearContacts()">Clear All Messages</button>
+            </div>
+            <div id="contactsList" class="admin-grid"></div>
+        </section>
+    </section>
+
+    <!-- EDIT DRIVER MODAL -->
+    <div class="modal-overlay" id="editDriverModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Edit Driver</h2>
+                <button class="close-modal-btn" onclick="closeEditDriverModal()">✕</button>
+            </div>
+
+            <form id="editDriverForm">
+                <input type="hidden" id="editDriverId">
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="editDriverName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" id="editDriverPhone" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="editDriverEmail">
+                </div>
+
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" id="editDriverCity" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Vehicle Number</label>
+                    <input type="text" id="editVehicleNumber" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Vehicle Type</label>
+                    <select id="editVehicleType" required>
+                        <option value="Bike">Bike</option>
+                        <option value="Auto">Auto</option>
+                        <option value="Cab">Cab</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>License Number</label>
+                    <input type="text" id="editLicenseNumber" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Experience</label>
+                    <select id="editExperience" required>
+                        <option value="0-1 Year">0-1 Year</option>
+                        <option value="1-3 Years">1-3 Years</option>
+                        <option value="3-5 Years">3-5 Years</option>
+                        <option value="5+ Years">5+ Years</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Save Driver</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ASSIGN RIDE MODAL -->
+    <div class="modal-overlay" id="assignRideModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Assign Ride To Driver</h2>
+                <button class="close-modal-btn" onclick="closeAssignRideModal()">✕</button>
+            </div>
+
+            <form id="assignRideForm">
+                <input type="hidden" id="assignRideId">
+
+                <div class="form-group">
+                    <label>Select Driver</label>
+                    <select id="assignDriverSelect" required>
+                        <option value="">Choose Driver</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Assign Ride</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

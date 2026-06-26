@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideEZ - Driver Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">RideEZ</div>
+
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="driver-register.html">Driver Register</a>
+                <a href="driver-dashboard.html" class="active">Driver Dashboard</a>
+                <a href="admin.html">Admin</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="dashboard-page">
+        <div class="dashboard-top">
+            <h1>Driver Dashboard</h1>
+            <p>View registered drivers and assigned rides</p>
+        </div>
+
+        <div class="dashboard-stats">
+            <div class="stat-box">
+                <h2 id="totalDrivers">0</h2>
+                <p>Total Drivers</p>
+            </div>
+
+            <div class="stat-box">
+                <h2 id="activeDrivers">0</h2>
+                <p>Assigned Drivers</p>
+            </div>
+
+            <div class="stat-box">
+                <h2 id="todayDrivers">0</h2>
+                <p>New Drivers</p>
+            </div>
+        </div>
+
+        <div class="dashboard-search">
+            <input type="text" id="searchDriver" placeholder="Search by name or phone">
+        </div>
+
+        <div class="driver-list-section">
+            <h2>Registered Drivers</h2>
+            <div id="driverList" class="driver-grid"></div>
+        </div>
+
+        <div class="driver-list-section" style="margin-top:30px;">
+            <h2>Assigned Rides</h2>
+            <div id="assignedRideList" class="driver-grid"></div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

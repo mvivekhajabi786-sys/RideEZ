@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideEZ - Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">RideEZ</div>
+
+            <nav class="nav" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="book-ride.html">Book Ride</a>
+                <a href="signup.html" class="active">Signup</a>
+                <a href="login.html">Login</a>
+                <a href="driver-register.html">Driver Register</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-btn">🌙</button>
+                <button id="menuToggle" class="menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="auth-page">
+        <div class="auth-wrapper">
+
+            <div class="auth-left">
+                <span class="badge">Create Account</span>
+                <h1>Create Your RideEZ Account</h1>
+                <p>Join RideEZ to book rides, manage your profile and access your dashboard easily.</p>
+
+                <div class="auth-features">
+                    <div class="feature-card">
+                        <h3>Easy Booking</h3>
+                        <p>Create your account and book your bike, auto or cab ride quickly.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Manage Rides</h3>
+                        <p>Track your bookings and manage ride details from your dashboard.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Secure Access</h3>
+                        <p>Your login details are stored locally for your RideEZ project demo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-right">
+                <div class="form-box">
+                    <h2>Create Account</h2>
+
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" placeholder="Enter full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupPhone">Phone Number</label>
+                            <input type="tel" id="signupPhone" placeholder="Enter phone number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" placeholder="Enter email address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <div class="password-wrap">
+                                <input type="password" id="signupPassword" placeholder="Enter password" required>
+                                <span id="toggleSignupPassword" class="toggle-password">👁️</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signupConfirmPassword">Confirm Password</label>
+                            <div class="password-wrap">
+                                <input type="password" id="signupConfirmPassword" placeholder="Confirm password"
+                                    required>
+                                <span id="toggleConfirmPassword" class="toggle-password">👁️</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Register</button>
+                    </form>
+
+                    <p id="signupMsg"></p>
+
+                    <div class="auth-footer-text">
+                        <p>Already have an account? <a href="login.html">Login here</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
